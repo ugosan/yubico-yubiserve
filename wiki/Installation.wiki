@@ -1,0 +1,55 @@
+= Author =
+YubiServe has been written by Alessio Periloso
+
+
+= Description =
+This simple service allows to authenticate yubikeys using only a small
+sqlite database.
+
+The code has been released under GNU license (license into LICENSE file)
+
+
+= Running =
+To authenticate, call the script yubiserve.php with the parameter otp.
+
+Example: {{{http://localhost/yubiserve.php?otp=vviblrbuicuvevcnnedbuuhjfhrebjlchhidkfrdkike}}}
+
+
+= Key Configuration =
+|| *Action* || *Command* ||
+|| Add a new key || ./keyconf.py -a publicname internalname aeskey ||
+|| Delete a key || ./keyconf.py -k publicname ||
+|| Disable a key || ./keyconf.py -d publicname ||
+|| Enable a key || ./keyconf.py -e publicname ||
+
+
+= Dependencies =
+The YubiServe service needs the php-sqlite, php-mcrypt and python-sqlite support.
+On debian/ubuntu, you can run:
+{{{sudo apt-get install php5-mcrypt php5-sqlite python-sqlite}}}
+
+
+= Apache Configuration =
+About Apache configuration, it is *REALLY IMPORTANT* users are not
+allowed to download the yubikeys.sqlite database.
+
+For this purpose, I wrote the .htaccess file into yubiserve directory.
+
+Sometimes however, into main Apache configuration the AllowOverride parameter
+is set to "None", and the .htaccess won't be loaded at all.
+
+If this is your case, be sure to add to your apache configuration the
+following lines (change <path to yubiserve>!!!):
+
+{{{
+        <Directory <path to yubiserve>/>
+#ex.    <Directory /var/www/yubiserve/>
+                Order deny,allow
+                Deny from all
+
+                <Files yubiserve.php>
+                        Order deny,allow
+                        Allow from all
+                </Files>
+        </Directory>
+}}}
