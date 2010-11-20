@@ -17,7 +17,7 @@ server responses.
 Everything is managed through nicknames, to make keys easy to remember
 who belong to.
 
-For example, to add a new yubikey, write:
+*For example, to add a new yubikey, write:*
 {{{
 ./dbconf.py -ya alessio vvkdtkjureru 980a8608b307 f1dc9c6585d600d06f9aae1abea2969e
 }}}
@@ -28,7 +28,7 @@ key public identity (the one you can see at the beginning of your OTPs),
 you program your key), and the last parameter is the AES Key.
 
 
-To add a new OATH/HOTP:
+*To add a new OATH/HOTP:*
 {{{
 ./dbconf.py -ha alessio 4rvn24642402 f03ddacdfebb6396f60d7045f41de68f5c5e1c3f
 }}}
@@ -38,7 +38,7 @@ the public identity of the token (it could be also 1, 2, 'alessio' or
 whatever you want; the Yubico implementation is 12 characters long)
 
 
-To add a new API key:
+*To add a new API key:*
 {{{
 ./dbconf.py -aa alessio
 }}}
@@ -53,13 +53,17 @@ meant to be used later in your queries to the Yubiserve validation server.
 Understanding how to use the Yubiserve web application is pretty simple.
 You just have to run it (./yubiserve.py) and send your queries through
 HTTP GET connections.
+
 The default listening port is 8000, the default listening ip is 0.0.0.0
 (so you can connect to it from other machines). If you need it to answer
 only from local machine, you can change the ip to 127.0.0.1.
 When you connect to the server (ex. http://192.168.0.1:8000/), it will
 answer with a simple page, asking you Yubico Yubikeys OTPs or OATH/HOTP
 tokens.
+
+
 The Yubico Yubikey needs only one parameter: the OTP.
+
 The OATH/HOTP tokens needs two parameters: the OTP itself (6 or 8 digits)
 and the Token Identifier. The token identifier can be any character string
 you prefer, or, according to the standard OATH implementation, the preceding
