@@ -1,6 +1,4 @@
 #labels Featured,Phase-Requirements
-= Installation =
-
 Installation is pretty simple, you just have to install few python packages:
 Under Debian, you can run:
 apt-get install python python-sqlite python-crypto
