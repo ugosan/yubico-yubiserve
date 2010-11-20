@@ -55,8 +55,22 @@ You just have to run it (./yubiserve.py) and send your queries through
 HTTP GET connections.
 
 The default listening port is 8000, the default listening ip is 0.0.0.0
-(so you can connect to it from other machines). If you need it to answer
-only from local machine, you can change the ip to 127.0.0.1.
+(so you can connect to it from other machines).
+
+If you need it to answer only from local machine, you can change the ip to 127.0.0.1; if you want, you can also change the port. Just open the file 'yubiserve.py', and change the following lines:
+{{{
+yubiservePORT = 8000
+yubiserveHOST = '0.0.0.0'
+}}}
+
+Ex.:
+{{{
+yubiservePORT = 80
+yubiserveHOST = '127.0.0.1'
+}}}
+
+This way it will answer on default HTTP port 80, on localhost only. Of course, you must make sure the port is available and not already being used by something else (like Apache)!
+
 When you connect to the server (ex. http://192.168.0.1:8000/), it will
 answer with a simple page, asking you Yubico Yubikeys OTPs or OATH/HOTP
 tokens.
