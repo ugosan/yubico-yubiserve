@@ -1,8 +1,12 @@
 #labels Featured,Phase-Requirements
 Installation is pretty simple, you just have to install few python packages:
+
 Under Debian, you can run:
+{{{
 apt-get install python python-sqlite python-crypto
+}}}
 That's all, yes!
+
 After installing the needed packages, you just need to extract the files
 to a directory, add the keys and launch the server (or, if you prefer
 you can launch the server before adding the keys, it doesn't matter).
