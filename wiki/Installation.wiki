@@ -3,10 +3,15 @@ Installation is pretty simple, you just have to install few python packages:
 
 Under Debian, you can run:
 {{{
-apt-get install python python-sqlite python-crypto
+apt-get install python python-sqlite python-crypto python-openssl
 }}}
 That's all, yes!
 
+Then, you have to generate the certificate for ssl validation, so if you don't
+already have a certificate you have to issue the following command to self-sign
+one:
+openssl req -new -x509 -keyout yubiserve.pem -out yubiserve.pem -days 365 -nodes
+That's all, yes!
 After installing the needed packages, you just need to extract the files
 to a directory, add the keys and launch the server (or, if you prefer
 you can launch the server before adding the keys, it doesn't matter).
