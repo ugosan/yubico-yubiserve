@@ -1,6 +1,6 @@
 #labels Featured,Phase-Implementation
 Querying the Yubiserve Validation Server is pretty simple.
-The following rules apples both to HTTP and HTTPS requests.
+The following rules can be applied both to HTTP and HTTPS requests.
 
 For Yubico Yubikeys, you will need to send a HTTP GET connection to:
 {{{
