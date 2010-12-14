@@ -52,7 +52,7 @@ meant to be used later in your queries to the Yubiserve validation server.
 == The Yubiserve Validation Server ==
 Understanding how to use the Yubiserve web application is pretty simple.
 You just have to run it (./yubiserve.py) and send your queries through
-HTTP GET connections.
+HTTP (or HTTPS if you prefer) GET connections.
 
 The default HTTP listening port is 8000, the default listening ip is 0.0.0.0
 (so you can connect to it from other machines).
