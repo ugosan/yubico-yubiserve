@@ -25,7 +25,9 @@ one:
 {{{
 openssl req -new -x509 -keyout yubiserve.pem -out yubiserve.pem -days 365 -nodes
 }}}
-That's all, yes!
+
+A good idea would be taking a look at yubiserve.cfg, to configure the validation server settings.
+
 After installing the needed packages, you just need to extract the files
 to a directory, add the keys and launch the server (or, if you prefer
 you can launch the server before adding the keys, it doesn't matter).
