@@ -48,7 +48,7 @@ So, you will have to query, via HTTP GET, the following address:
 {{{
 http://<server ip>:<server port>/wsapi/2.0/oathverify?otp=<your otp>&publicid=<token id>
 ex.: http://192.168.0.1:8000/wsapi/2.0/oathverify?otp=80l944311056173483
-ex.: ex.: http://192.168.0.1:8000/wsapi/2.0/oathverify?otp=173483&publicid=80l944311056
+ex.: http://192.168.0.1:8000/wsapi/2.0/oathverify?otp=173483&publicid=80l944311056
 }}}
 Both the examples works the same way: in the first case, the Token Identifier was
 inside the generated OTP (like in Yubico Yubikey implementation), in the second case
