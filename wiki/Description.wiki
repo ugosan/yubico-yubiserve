@@ -11,8 +11,8 @@ The project is divided into two parts:
 The database management tool helps you to manage keys in the database.
 For detailed help, run the database management tool with ./dbconf.py
 
-The tool allows you to add, delete, disable and enable keys/tokens.
-You can also add and remove API keys, to check the server signature in
+The tool allows you to add, delete, disable, enable and show keys/tokens.
+You can also add, remove and show API keys, to check the server signature in
 server responses.
 Everything is managed through nicknames, to make keys easy to remember
 who belong to.
