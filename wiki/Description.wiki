@@ -1,6 +1,6 @@
 #labels Featured,Phase-Design
 This simple service allows to authenticate Yubikeys and OATH Tokens using
-only a small sqlite database.
+only a small sqlite database (the mysql support is optional!).
 The code has been released under GNU license (license into LICENSE file)
 
 The project is divided into two parts:
